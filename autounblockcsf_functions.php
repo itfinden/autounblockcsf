@@ -16,7 +16,8 @@ function autounblockcsf_sanitizeGlobals() {
 	$GLOBALS['autounblockcsf'] = $globalsArr;
 }
 autounblockcsf_sanitizeGlobals();
-//if (file_exists(ROOTDIR.'/modules/addons/autounblockcsf/debug')) {echo '<pre>'.print_r($GLOBALS['autounblockcsf'],true).'</pre>';} // debug
+
+if (file_exists(ROOTDIR . '/modules/addons/autounblockcsf/debug')) {echo '<pre>' . print_r($GLOBALS['autounblockcsf'], true) . '</pre>';} // debug
 
 function autounblockcsf_returnFileSize($fileSize) {
 	switch ($fileSize):
@@ -887,9 +888,9 @@ function getAutoUnblock($actionIP, $action, $serverID, $userid = 0, $appconfig =
 				}
 				// end foreach
 
-				$resultData['line'] = $resultData['line'] . '<br/><br/>' . print_r($iparr, true); //Debug
-				$printMessage = $printMessage . '<br/><br/>' . print_r($iparr, true); //Debug
-				print_r($iparr); //Debug
+				//	$resultData['line'] = $resultData['line'] . '<br/><br/>' . print_r($iparr, true); //Debug
+				//	$printMessage = $printMessage . '<br/><br/>' . print_r($iparr, true); //Debug
+				//	print_r($iparr); //Debug
 
 			} elseif ($action == 'qallow' || $action == 'qdeny' || $action == 'qignore') {
 				foreach ($dataArr as $logLine) {
